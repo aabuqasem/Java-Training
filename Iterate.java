@@ -1,13 +1,16 @@
 public class Iterate {
 	public static void main (String[] args) {
-		final String text = System.console().readLine("Enter your text: ");
-		final String NUM = System.console().readLine("Enter your iteration number: ");
+
+		if(args.length != 2) {
+			System.out.println(
+					"Usage: java Iterate (string) (times)"
+			);
+			return;
+		}
+		final int COUNT = Integer.parseInt(args[1]); 
 		
-		
-		int count = Integer.parseInt(NUM); 
-		
-		for(int i = 0; i < count; i++) {
-			System.out.println(text);	
+		for(int n = 0; n < COUNT; n++) {
+			System.out.print(args[0]);	
 		}
 	}
 }
